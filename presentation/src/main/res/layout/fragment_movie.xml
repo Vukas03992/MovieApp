@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:overScrollMode="never">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fragment_movie_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fragment_movie_image_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop"
+            android:foreground="@drawable/item_image_overlay"/>
+
+        <TextView
+            android:id="@+id/fragment_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_movie_image"
+            app:layout_constraintEnd_toStartOf="@id/fragment_movie_favourite"
+            tools:text="Bumblebee"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli_bold"
+            android:textSize="@dimen/item_movie_title_text_size"
+            android:layout_marginStart="@dimen/item_movie_title_margin_start"
+            android:layout_marginEnd="@dimen/item_movie_title_margin_end"/>
+
+        <ImageView
+            android:id="@+id/fragment_movie_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_movie_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/item_movie_favourite_margin_bottom"
+            android:layout_marginEnd="@dimen/item_movie_favourite_margin_end"
+            android:src="@drawable/ic_favourite_off"/>
+
+        <TextView
+            android:id="@+id/fragment_movie_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_movie_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="6.9"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli_regular"
+            android:textSize="@dimen/item_movie_rating_text_size"
+            android:layout_marginTop="@dimen/item_movie_rating_margin_top"
+            android:layout_marginStart="@dimen/item_movie_rating_margin_start"
+            android:layout_marginEnd="@dimen/item_movie_rating_margin_end"
+            android:drawableStart="@android:drawable/star_off"/>
+
+        <TextView
+            android:id="@+id/fragment_movie_genres"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_movie_rating"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="action"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli_regular"
+            android:textSize="@dimen/item_movie_genres_text_size"
+            android:layout_marginTop="@dimen/item_movie_genres_margin_top"
+            android:layout_marginStart="@dimen/item_movie_genres_margin_start"
+            android:layout_marginEnd="@dimen/item_movie_genres_margin_end" />
+
+        <TextView
+            android:id="@+id/fragment_movie_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_movie_genres"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="action"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli_regular"
+            android:textSize="@dimen/item_movie_description_text_size"
+            android:layout_marginTop="@dimen/item_movie_description_margin_top"
+            android:layout_marginStart="@dimen/item_movie_description_margin_start"
+            android:layout_marginEnd="@dimen/item_movie_description_margin_end" />
+
+        <TextView
+            android:id="@+id/fragment_movie_cast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_movie_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="action"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli_regular"
+            android:textSize="@dimen/item_movie_cast_text_size"
+            android:layout_marginTop="@dimen/item_movie_cast_margin_top"
+            android:layout_marginStart="@dimen/item_movie_cast_margin_start"
+            android:layout_marginEnd="@dimen/item_movie_cast_margin_end" />
+
+        <FrameLayout
+            android:id="@+id/fragment_movie_progress_bar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

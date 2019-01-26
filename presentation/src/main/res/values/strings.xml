@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="fragment_movie_list_refresh_text">refresh</string>
+    <string name="fragment_movie_list_favourite_text">favourites</string>
+</resources>

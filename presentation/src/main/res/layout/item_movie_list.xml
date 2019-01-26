@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/item_movie_list_image"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/item_movie_list_image_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:foreground="@drawable/item_image_overlay"
+        />
+
+    <TextView
+        android:id="@+id/item_movie_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/item_movie_list_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Bumble"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/muli_bold"
+        android:textSize="@dimen/item_movie_list_title_text_size"
+        android:layout_marginBottom="@dimen/item_movie_list_title_margin_bottom"
+        android:layout_marginStart="@dimen/item_movie_list_title_margin_start"
+        android:layout_marginEnd="@dimen/item_movie_list_title_margin_end"/>
+
+    <TextView
+        android:id="@+id/item_movie_list_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/item_movie_list_genres"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="6.9"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/muli_regular"
+        android:textSize="@dimen/item_movie_list_rating_text_size"
+        android:layout_marginBottom="@dimen/item_movie_list_rating_margin_bottom"
+        android:layout_marginStart="@dimen/item_movie_list_rating_margin_start"
+        android:layout_marginEnd="@dimen/item_movie_list_rating_margin_end"
+        android:drawableStart="@android:drawable/star_off"/>
+
+    <TextView
+        android:id="@+id/item_movie_list_genres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="action"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/muli_regular"
+        android:textSize="@dimen/item_movie_list_genres_text_size"
+        android:layout_marginBottom="@dimen/item_movie_list_genres_margin_bottom"
+        android:layout_marginStart="@dimen/item_movie_list_genres_margin_start"
+        android:layout_marginEnd="@dimen/item_movie_list_genres_margin_end" />
+
+
+
+</android.support.constraint.ConstraintLayout>
