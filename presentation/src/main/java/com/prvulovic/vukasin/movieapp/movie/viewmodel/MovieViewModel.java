@@ -44,6 +44,8 @@ public class MovieViewModel extends FragmentLifecycleTask {
                 .subscribe(movie->{
                     this.movie=movie;
                     moviePublisher.onNext(movie);
+                },error->{
+                    //TODO
                 });
     }
 
@@ -55,6 +57,10 @@ public class MovieViewModel extends FragmentLifecycleTask {
         disposableManager.add(addFavourite.add(movie)
                 .subscribeOn(Schedulers.from(executor))
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe());
+                .subscribe(success->{
+
+                },error->{
+                    //TODO
+                }));
     }
 }

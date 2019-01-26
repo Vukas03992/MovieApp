@@ -69,6 +69,8 @@ public class MovieListViewModel extends FragmentLifecycleTask {
                     favouriteList=false;
                     this.movieList=movieList;
                     movieListAdapter.setData(movieList.getMovieList());
+                },error->{
+                    //TODO
                 });
     }
 
@@ -92,6 +94,8 @@ public class MovieListViewModel extends FragmentLifecycleTask {
                 .subscribe(movieList -> {
                     favouriteList=true;
                     movieListAdapter.setData(movieList);
+                },error->{
+                    //TODO
                 }));
     }
 
@@ -106,6 +110,8 @@ public class MovieListViewModel extends FragmentLifecycleTask {
                     .subscribe(movieList -> {
                         favouriteList=true;
                         movieListAdapter.setData(movieList);
+                    },error->{
+                        //TODO
                     }));
             return true;
         }else {
